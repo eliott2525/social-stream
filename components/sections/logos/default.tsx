@@ -1,31 +1,41 @@
-import Figma from "../../logos/figma";
-import React from "../../logos/react";
-import ShadcnUi from "../../logos/shadcn-ui";
-import Tailwind from "../../logos/tailwind";
-import TypeScript from "../../logos/typescript";
-import Logo from "../../ui/logo";
 import { Section } from "../../ui/section";
-import { Badge } from "../../ui/badge";
-import { siteConfig } from "@/config/site";
+import TwitterLogo from "../../logos/social/twitter";
+import FacebookLogo from "../../logos/social/facebook";
+import InstagramLogo from "../../logos/social/instagram";
+import PinterestLogo from "../../logos/social/pinterest";
+import LinkedInLogo from "../../logos/social/linkedin";
+import ThreadsLogo from "../../logos/social/threads";
+import TikTokLogo from "../../logos/social/tiktok";
+import YouTubeLogo from "../../logos/social/youtube";
 
 export default function Logos() {
+  const platforms = [
+    { name: "X (Twitter)", icon: <TwitterLogo /> },
+    { name: "Facebook", icon: <FacebookLogo /> },
+    { name: "Instagram", icon: <InstagramLogo /> },
+    { name: "LinkedIn", icon: <LinkedInLogo /> },
+    { name: "TikTok", icon: <TikTokLogo /> },
+    { name: "YouTube", icon: <YouTubeLogo /> },
+    { name: "Pinterest", icon: <PinterestLogo /> },
+    { name: "Threads", icon: <ThreadsLogo /> },
+  ];
+
   return (
     <Section>
-      <div className="mx-auto flex max-w-container flex-col items-center gap-8 text-center">
-        <div className="flex flex-col items-center gap-6">
-          <Badge variant="outline" className="border-brand/30 text-brand">
-            Last updated: {siteConfig.stats.updated}
-          </Badge>
-          <h2 className="text-md font-semibold sm:text-2xl">
-            Built with industry-standard tools and best practices
-          </h2>
-        </div>
-        <div className="flex flex-wrap items-center justify-center gap-8">
-          <Logo image={Figma} name="Figma" />
-          <Logo image={React} name="React" version="19.0.0" />
-          <Logo image={TypeScript} name="TypeScript" version="5.6.3" />
-          <Logo image={ShadcnUi} name="Shadcn/ui" version="2.1.8" />
-          <Logo image={Tailwind} name="Tailwind" version="3.4.14" />
+      <div className="mx-auto flex max-w-container flex-col items-center gap-12">
+        <h2 className="text-center text-xl font-medium text-muted-foreground">
+          Manage all your social media platforms in one place
+        </h2>
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 md:grid-cols-8">
+          {platforms.map((platform) => (
+            <div
+              key={platform.name}
+              className="flex flex-col items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {platform.icon}
+              <span className="text-sm font-medium">{platform.name}</span>
+            </div>
+          ))}
         </div>
       </div>
     </Section>
