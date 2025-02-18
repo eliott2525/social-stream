@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { Target, MessageCircle, Bot, BarChart } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Quick Questions",
@@ -10,22 +11,22 @@ export const metadata: Metadata = {
 
 const goals = [
   {
-    icon: "🎯",
+    icon: <Target className="w-6 h-6 text-primary/70" />,
     title: "Grow My Audience",
     description: "Expand reach and gain more followers"
   },
   {
-    icon: "💬",
+    icon: <MessageCircle className="w-6 h-6 text-primary/70" />,
     title: "Increase Engagement",
     description: "Get more likes, comments, and shares"
   },
   {
-    icon: "🤖",
+    icon: <Bot className="w-6 h-6 text-primary/70" />,
     title: "Save Time",
     description: "Automate posting and content creation"
   },
   {
-    icon: "📊",
+    icon: <BarChart className="w-6 h-6 text-primary/70" />,
     title: "Track Performance",
     description: "Measure and optimize results"
   }
@@ -60,7 +61,7 @@ export default function QuestionsPage() {
             className="p-6 cursor-pointer hover:border-primary/50 hover:bg-primary/5 transition-colors"
           >
             <div className="space-y-2">
-              <div className="text-2xl">{goal.icon}</div>
+              <div>{goal.icon}</div>
               <h3 className="font-semibold">{goal.title}</h3>
               <p className="text-sm text-muted-foreground">
                 {goal.description}
@@ -71,7 +72,7 @@ export default function QuestionsPage() {
       </div>
 
       {/* Navigation */}
-      <div className="flex justify-between pt-4">
+      <div className="flex justify-between">
         <Button variant="ghost" asChild>
           <Link href="/onboarding/congratulations">
             ← Back

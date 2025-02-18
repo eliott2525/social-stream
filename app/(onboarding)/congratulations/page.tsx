@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { PartyPopper } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Welcome Aboard!",
@@ -12,8 +13,8 @@ export default function CongratulationsPage() {
   return (
     <div className="space-y-8 text-center">
       <div className="space-y-2">
-        <h1 className="text-3xl font-bold tracking-tight">
-          🎉 Congratulations!
+        <h1 className="text-3xl font-bold tracking-tight flex items-center justify-center gap-2">
+          <PartyPopper className="w-8 h-8 text-primary" /> Congratulations!
         </h1>
         <p className="text-muted-foreground text-lg">
           You've taken the first step toward mastering your social media presence

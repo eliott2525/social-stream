@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { Clock, Target, Boxes, Zap, TrendingUp, CheckCircle2 } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "The Challenge",
@@ -10,17 +11,17 @@ export const metadata: Metadata = {
 
 const challenges = [
   {
-    icon: "⏰",
+    icon: <Clock className="w-6 h-6 text-destructive/70" />,
     title: "Time-Consuming",
     description: "Managing multiple social platforms takes hours of your valuable time"
   },
   {
-    icon: "🎯",
+    icon: <Target className="w-6 h-6 text-destructive/70" />,
     title: "Inconsistent Results",
     description: "Posting randomly leads to poor engagement and slow growth"
   },
   {
-    icon: "🤹",
+    icon: <Boxes className="w-6 h-6 text-destructive/70" />,
     title: "Overwhelming",
     description: "Juggling content creation, scheduling, and analytics is exhausting"
   }
@@ -28,17 +29,17 @@ const challenges = [
 
 const solutions = [
   {
-    icon: "⚡️",
+    icon: <Zap className="w-6 h-6 text-primary/70" />,
     title: "Save 10+ Hours Weekly",
     description: "Schedule a week's worth of content in minutes"
   },
   {
-    icon: "📈",
+    icon: <TrendingUp className="w-6 h-6 text-primary/70" />,
     title: "Grow 3x Faster",
     description: "Our AI helps optimize your posting schedule and content"
   },
   {
-    icon: "🎯",
+    icon: <CheckCircle2 className="w-6 h-6 text-primary/70" />,
     title: "Stay Consistent",
     description: "Never miss a post with our automated scheduling"
   }
@@ -71,7 +72,7 @@ export default function ProblemAwarenessPage() {
           {challenges.map((challenge) => (
             <Card key={challenge.title} className="p-6 border-destructive/20 bg-destructive/5">
               <div className="flex items-start space-x-4">
-                <div className="text-2xl">{challenge.icon}</div>
+                <div>{challenge.icon}</div>
                 <div>
                   <h3 className="font-semibold">{challenge.title}</h3>
                   <p className="text-sm text-muted-foreground">
@@ -97,7 +98,7 @@ export default function ProblemAwarenessPage() {
           {solutions.map((solution) => (
             <Card key={solution.title} className="p-6 border-primary/20 bg-primary/5">
               <div className="flex items-start space-x-4">
-                <div className="text-2xl">{solution.icon}</div>
+                <div>{solution.icon}</div>
                 <div>
                   <h3 className="font-semibold">{solution.title}</h3>
                   <p className="text-sm text-muted-foreground">
