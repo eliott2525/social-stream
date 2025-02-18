@@ -12,11 +12,7 @@ export default function AuthLayout({
 }) {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="relative w-full max-w-[450px] p-6 mx-auto space-y-6">
-        <div className="flex flex-col items-center space-y-2 text-center">
-          <h1 className="text-2xl font-bold">Welcome back</h1>
-          <p className="text-muted-foreground">Enter your credentials to access your account</p>
-        </div>
+      <div className="relative w-full max-w-[450px] p-6 mx-auto">
         {children}
       </div>
     </div>
