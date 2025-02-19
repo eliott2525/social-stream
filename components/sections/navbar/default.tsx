@@ -56,16 +56,16 @@ export default function Navbar() {
         {/* Main Navigation */}
         <div className="hidden items-center gap-6 md:flex">
           <button
-            onClick={() => scrollToSection("features")}
-            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Features
-          </button>
-          <button
             onClick={() => scrollToSection("platforms")}
             className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             Platforms
+          </button>
+          <button
+            onClick={() => scrollToSection("features")}
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Features
           </button>
           <button
             onClick={() => scrollToSection("pricing")}
@@ -91,10 +91,10 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-3">
             <Button variant="ghost" size="sm" asChild>
-              <a href="/login">Login</a>
+              <a href={siteConfig.loginUrl}>Login</a>
             </Button>
             <Button variant="default" size="sm" asChild>
-              <a href="/register">Sign up</a>
+              <a href={siteConfig.getStartedUrl}>Sign up</a>
             </Button>
           </div>
           <ModeToggle />

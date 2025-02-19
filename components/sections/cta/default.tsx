@@ -2,15 +2,19 @@ import { Section } from "../../ui/section";
 import { Button } from "../../ui/button";
 import { siteConfig } from "@/config/site";
 import Glow from "../../ui/glow";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 export default function CTA() {
   return (
     <Section className="group relative overflow-hidden">
       <div className="relative z-10 mx-auto flex max-w-container flex-col items-center gap-6 text-center sm:gap-8">
         <h2 className="text-3xl font-semibold sm:text-5xl">Ready to Simplify Your Content Strategy?</h2>
-        <p className="text-lg text-muted-foreground">Join thousands of creators and teams who trust us for effortless content scheduling.</p>
+        <p className="text-lg text-muted-foreground">Join thousands of creators and teams who gather millions of views every week.</p>
         <Button variant="default" size="lg" asChild>
-          <a href={siteConfig.getStartedUrl}>Start Your Free Trial Now</a>
+          <a href="/register" className="flex items-center">
+            Start now
+            <ArrowRightIcon className="ml-2 h-4 w-4" />
+          </a>
         </Button>
       </div>
       <div className="absolute left-0 top-0 h-full w-full translate-y-[1rem] opacity-80 transition-all duration-500 ease-in-out group-hover:translate-y-[-2rem] group-hover:opacity-100">

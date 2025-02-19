@@ -1,14 +1,13 @@
 "use client";
 
 import { Button } from "../../ui/button";
-import { ArrowRightIcon } from "lucide-react";
 import { Section } from "../../ui/section";
 import { Mockup } from "../../ui/mockup";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
-
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 export default function Hero() {
   const { resolvedTheme } = useTheme();
   let src;
@@ -45,7 +44,7 @@ export default function Hero() {
             <Button size="lg" className="relative h-14 px-8 text-lg" asChild>
               <a href={siteConfig.getStartedUrl} className="flex items-center gap-2">
                 Start now
-                <ArrowRightIcon className="h-5 w-5" />
+                <ArrowRightIcon className="ml-2 h-4 w-4" />
               </a>
             </Button>
           </div>

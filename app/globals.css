@@ -5,8 +5,8 @@
 @layer base {
   :root {
     /* Accent colors */
-    --brand: 197 100% 39%;
-    --brand-foreground: 130 45% 66%;
+    --brand: 220 70% 30%;
+    --brand-foreground: 47.9 95.8% 53.1%;
 
     /* Customized shadcn/ui colors */
     --background: 0 5.9% 97%;
