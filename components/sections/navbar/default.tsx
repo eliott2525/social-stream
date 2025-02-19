@@ -89,9 +89,12 @@ export default function Navbar() {
 
         {/* Right Side Actions */}
         <div className="flex items-center gap-4">
-          <div className="hidden md:flex">
+          <div className="hidden md:flex items-center gap-3">
+            <Button variant="ghost" size="sm" asChild>
+              <a href="/login">Login</a>
+            </Button>
             <Button variant="default" size="sm" asChild>
-              <a href={siteConfig.getStartedUrl}>Start Free Trial</a>
+              <a href="/register">Sign up</a>
             </Button>
           </div>
           <ModeToggle />

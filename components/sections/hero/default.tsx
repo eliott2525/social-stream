@@ -32,10 +32,7 @@ export default function Hero() {
         <div className="flex flex-1 flex-col gap-12">
           <div className="flex flex-col gap-8">
             <h1 className="text-4xl font-semibold leading-tight sm:text-6xl sm:leading-tight">
-              Put your <span className="relative">
-                <span className="relative z-10">content</span>
-                <span className="absolute bottom-0 left-0 right-0 h-[2px] w-full bg-brand" />
-              </span> first
+              Put your content first
             </h1>
             <p className="text-lg text-muted-foreground sm:text-xl">
               Fast, user-friendly and engaging - streamline your social media presence and boost engagement across all platforms with your own branded dashboard.
@@ -47,7 +44,7 @@ export default function Hero() {
             <div className="absolute -left-4 top-0 h-24 w-24 rounded-full bg-brand/20 blur-2xl" />
             <Button size="lg" className="relative h-14 px-8 text-lg" asChild>
               <a href={siteConfig.getStartedUrl} className="flex items-center gap-2">
-                Book a demo
+                Start now
                 <ArrowRightIcon className="h-5 w-5" />
               </a>
             </Button>
