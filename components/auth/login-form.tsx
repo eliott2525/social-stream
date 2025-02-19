@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-
+import { siteConfig } from "@/config/site"
 export function LoginForm({
   className,
   ...props
@@ -26,7 +26,7 @@ export function LoginForm({
             <h1 className="text-xl font-bold">Welcome to Acme Inc.</h1>
             <div className="text-center text-sm">
               Don&apos;t have an account?{" "}
-              <a href="#" className="underline underline-offset-4">
+              <a href={siteConfig.getStartedUrl} className="underline underline-offset-4">
                 Sign up
               </a>
             </div>

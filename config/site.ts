@@ -10,7 +10,6 @@ export const siteConfig = {
     twitter: "https://twitter.com/socialstream",
     facebook: "https://facebook.com/socialstream",
     instagram: "https://instagram.com/socialstream",
-    github: "https://github.com/socialstream",
     email: "mailto:contact@socialstream.app",
   },
   pricing: {

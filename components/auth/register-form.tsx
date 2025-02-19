@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { siteConfig } from "@/config/site"
 
 export function RegisterForm({
   className,
@@ -26,7 +27,7 @@ export function RegisterForm({
             <h1 className="text-xl font-bold">Create your account</h1>
             <div className="text-center text-sm">
               Already have an account?{" "}
-              <a href="#" className="underline underline-offset-4">
+              <a href={siteConfig.loginUrl} className="underline underline-offset-4">
                 Sign in
               </a>
             </div>
