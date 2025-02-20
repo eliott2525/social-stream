@@ -83,6 +83,20 @@ const config = {
             height: "0",
           },
         },
+        highlight: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(50%)" }
+        },
+        "text-reveal": {
+          "0%": { 
+            transform: "translateY(100%)",
+            opacity: "0"
+          },
+          "100%": { 
+            transform: "translateY(0)",
+            opacity: "1"
+          }
+        },
         marquee: {
           from: {
             transform: "translateX(0)",
@@ -167,6 +181,9 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "text-reveal-1": "text-reveal 0.5s ease-out forwards",
+        "text-reveal-2": "text-reveal 0.5s ease-out 0.5s forwards",
+        "text-reveal-3": "text-reveal 0.5s ease-out 1s forwards",
         appear: "appear 0.6s forwards ease-out",
         "appear-zoom": "appear-zoom 0.6s forwards ease-out",
         "pulse-hover": "pulse-hover 6s cubic-bezier(0.4, 0, 0.6, 1) infinite",

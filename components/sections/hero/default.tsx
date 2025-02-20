@@ -30,12 +30,22 @@ export default function Hero() {
         {/* Left Content */}
         <div className="flex flex-1 flex-col gap-12">
           <div className="flex flex-col gap-8">
-            <h1 className="text-4xl font-semibold leading-tight sm:text-6xl sm:leading-tight">
-              Put your content first
+            <h1 className="text-3xl font-semibold leading-tight sm:text-5xl sm:leading-tight flex flex-col gap-4">
+              <span>Unleash viral content.</span>
+              <span>Dominate every platform.</span>
+              <span className="relative overflow-hidden">
+                <span className="relative z-10">Get millions of views.</span>
+                <span 
+                  className="absolute inset-0 bg-brand-foreground"
+                  style={{ 
+                    animation: "highlight 3s ease-out 1s forwards",
+                    transform: "translateX(-100%)",
+                    left: "-100%",
+                    width: "200%"
+                  }} 
+                />
+              </span>
             </h1>
-            <p className="text-lg text-muted-foreground sm:text-xl">
-              Fast, user-friendly and engaging - streamline your social media presence and boost engagement across all platforms with your own branded dashboard.
-            </p>
           </div>
 
           {/* CTA Button */}
