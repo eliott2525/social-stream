@@ -38,10 +38,10 @@ export default function Hero() {
                 <span 
                   className="absolute inset-0 bg-brand-foreground"
                   style={{ 
-                    animation: "highlight 3s ease-out 1s forwards",
+                    animation: "highlight 2s ease-out forwards",
                     transform: "translateX(-100%)",
                     left: "-100%",
-                    width: "200%"
+                    width: "185%"
                   }} 
                 />
               </span>
