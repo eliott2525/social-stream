@@ -3,6 +3,7 @@ export const siteConfig = {
   url: "https://socialstream.app",
   getStartedUrl: "/register",
   loginUrl: "/login",
+  dashboardUrl: "/dashboard",
   ogImage: "https://socialstream.app/og.jpg",
   description:
     "Post, grow, and engage on all major platforms in seconds. No ridiculous price tag.",

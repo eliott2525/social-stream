@@ -38,13 +38,22 @@ export function LoginForm({
         throw signInError
       }
 
-      if (data.user) {
-        // Login successful - redirect to dashboard or home
-        router.push("/")
-        router.refresh()
+      if (data.session) {
+        // Check if user has completed onboarding
+        const { data: profile } = await supabase
+          .from("profiles")
+          .select("has_completed_onboarding")
+          .eq("id", data.session.user.id)
+          .single()
+
+        if (profile?.has_completed_onboarding) {
+          router.push(siteConfig.dashboardUrl)
+        } else {
+          router.push("/congratulations")
+        }
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Invalid login credentials")
+      setError(err instanceof Error ? err.message : "Something went wrong")
     } finally {
       setIsLoading(false)
     }
@@ -56,6 +65,13 @@ export function LoginForm({
       setError(null)
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
+        options: {
+          redirectTo: `${window.location.origin}/callback`,
+          queryParams: {
+            access_type: 'offline',
+            prompt: 'consent',
+          },
+        },
       })
       if (error) throw error
     } catch (err) {
@@ -81,7 +97,7 @@ export function LoginForm({
             </a>
             <h1 className="text-xl font-bold">Welcome back</h1>
             <div className="text-center text-sm">
-              Don&apos;t have an account?{" "}
+              Don't have an account?{" "}
               <a href={siteConfig.getStartedUrl} className="underline underline-offset-4">
                 Sign up
               </a>
@@ -105,15 +121,7 @@ export function LoginForm({
               />
             </div>
             <div className="grid gap-2">
-              <div className="flex items-center justify-between">
-                <Label htmlFor="password">Password</Label>
-                <a
-                  href="/auth/reset-password"
-                  className="text-sm text-muted-foreground underline underline-offset-4 hover:text-primary"
-                >
-                  Forgot password?
-                </a>
-              </div>
+              <Label htmlFor="password">Password</Label>
               <Input
                 id="password"
                 name="password"
@@ -126,6 +134,11 @@ export function LoginForm({
             <Button type="submit" className="w-full" disabled={isLoading}>
               {isLoading ? "Signing in..." : "Sign in"}
             </Button>
+            <div className="text-center text-sm">
+              <a href="/reset-password" className="text-muted-foreground underline underline-offset-4">
+                Forgot your password?
+              </a>
+            </div>
           </div>
           <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
             <span className="relative z-10 bg-background px-2 text-muted-foreground">
