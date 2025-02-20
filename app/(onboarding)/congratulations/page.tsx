@@ -37,7 +37,7 @@ export default function CongratulationsPage() {
       </div>
 
       <Button asChild size="lg" className="mt-8">
-        <Link href="/onboarding/questions">
+        <Link href="/questions">
           Let's Get Started →
         </Link>
       </Button>

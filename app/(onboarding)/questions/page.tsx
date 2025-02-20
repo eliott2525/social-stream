@@ -74,12 +74,12 @@ export default function QuestionsPage() {
       {/* Navigation */}
       <div className="flex justify-between">
         <Button variant="ghost" asChild>
-          <Link href="/onboarding/congratulations">
+          <Link href="/congratulations">
             ← Back
           </Link>
         </Button>
         <Button asChild>
-          <Link href="/onboarding/personalization">
+          <Link href="/personalization">
             Continue →
           </Link>
         </Button>

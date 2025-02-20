@@ -37,7 +37,7 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed left-0 top-0 z-50 w-full border-b bg-background/80 backdrop-blur-lg transition-all duration-200",
+        "fixed left-0 top-0 z-50 w-full border-b bg-brand-foreground/80 backdrop-blur-lg transition-all duration-200",
         {
           "border-transparent shadow-lg": scrolled,
           "border-muted": !scrolled,

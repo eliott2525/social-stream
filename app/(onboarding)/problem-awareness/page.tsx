@@ -114,12 +114,12 @@ export default function ProblemAwarenessPage() {
       {/* Navigation */}
       <div className="flex justify-between pt-4">
         <Button variant="ghost" asChild>
-          <Link href="/onboarding/personalization">
+          <Link href="/personalization">
             ← Back
           </Link>
         </Button>
         <Button asChild>
-          <Link href="/onboarding/pricing">
+          <Link href="/pricing">
             See Plans →
           </Link>
         </Button>

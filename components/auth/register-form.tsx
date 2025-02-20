@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react"
 import { GalleryVerticalEnd } from "lucide-react"
 import { useRouter } from "next/navigation"
@@ -59,6 +61,13 @@ export function RegisterForm({
       setError(null)
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
+        options: {
+          redirectTo: `${window.location.origin}/callback`,
+          queryParams: {
+            access_type: 'offline',
+            prompt: 'consent',
+          },
+        },
       })
       if (error) throw error
     } catch (err) {

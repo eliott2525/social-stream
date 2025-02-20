@@ -5,29 +5,29 @@
 @layer base {
   :root {
     /* Accent colors */
-    --brand: 220 70% 30%;
-    --brand-foreground: 47.9 95.8% 53.1%;
+    --brand: 240 100% 50%; /* Electric Ultramarine #3300FF */
+    --brand-foreground: 65 100% 50%; /* Chartreuse Yellow #D9FF00 */
 
     /* Customized shadcn/ui colors */
-    --background: 0 5.9% 97%;
-    --foreground: 240 10% 3.9%;
+    --background: 0 0% 100%; /* White */
+    --foreground: 0 0% 0%; /* Black */
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 0 0% 0%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: var(--brand);
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 94.9%;
-    --muted-foreground: 240 10% 3.9%;
-    --accent: 240 5% 64.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 72.22% 50.59%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 240 100% 50%; /* Electric Ultramarine #3300FF */
+    --primary-foreground: 0 0% 100%; /* White text on blue */
+    --secondary: 65 100% 50%; /* Chartreuse Yellow #D9FF00 */
+    --secondary-foreground: 0 0% 0%; /* Black text on yellow */
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 240 100% 50%; /* Electric Ultramarine #3300FF */
+    --accent-foreground: 0 0% 100%; /* White text on blue */
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 85%;
-    --ring: 240 5% 64.9%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 0%;
     --radius: 0.5rem;
 
     /* Chart colors for light mode */
@@ -48,29 +48,29 @@
 
   .dark {
     /* Accent colors */
-    --brand: 31 97% 72%;
-    --brand-foreground: 27 96% 61%;
+    --brand: 240 100% 50%; /* Electric Ultramarine #3300FF */
+    --brand-foreground: 65 100% 50%; /* Chartreuse Yellow #D9FF00 */
 
     /* Customized shadcn/ui colors */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 3.7% 15.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 0 0% 98%;
-    --accent: 0 0% 98%;
-    --accent-foreground: 0 0% 98%;
+    --background: 0 0% 0%; /* Black */
+    --foreground: 0 0% 100%; /* White */
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 240 100% 50%; /* Electric Ultramarine #3300FF */
+    --primary-foreground: 0 0% 100%; /* White text on blue */
+    --secondary: 65 100% 50%; /* Chartreuse Yellow #D9FF00 */
+    --secondary-foreground: 0 0% 0%; /* Black text on yellow */
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 240 100% 50%; /* Electric Ultramarine #3300FF */
+    --accent-foreground: 0 0% 100%; /* White text on blue */
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-    --border: 0 0% 98%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
 
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;

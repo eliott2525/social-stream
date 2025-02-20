@@ -99,12 +99,12 @@ export default function PersonalizationPage() {
       {/* Navigation */}
       <div className="flex justify-between pt-4">
         <Button variant="ghost" asChild>
-          <Link href="/onboarding/questions">
+          <Link href="/questions">
             ← Back
           </Link>
         </Button>
         <Button asChild>
-          <Link href="/onboarding/problem-awareness">
+          <Link href="/problem-awareness">
             Continue →
           </Link>
         </Button>
