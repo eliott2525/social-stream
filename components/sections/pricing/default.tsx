@@ -67,10 +67,10 @@ const plans: Plan[] = [
 export default function Pricing() {
   return (
     <Section>
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-8">
-        <h2 className="text-2xl font-semibold">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-16">
+        <h1 className="text-6xl font-semibold">
           Choose your plan
-        </h2>
+        </h1>
         <div className="mx-auto grid max-w-container grid-cols-1 gap-8 sm:grid-cols-2">
           {plans.map((plan) => (
             <div
