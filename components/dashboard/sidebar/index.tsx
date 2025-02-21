@@ -14,11 +14,11 @@ import {
   SidebarGroup,
   SidebarGroupLabel,
 } from "@/components/ui/sidebar";
-import { PlusCircle, FileText, CalendarClock, History, Video, Settings } from "lucide-react";
+import { PlusCircle, FileText, CalendarClock, History, Video, Settings, BarChart, Users } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export type DashboardView = "new" | "scheduled" | "past" | "studio" | "settings";
+export type DashboardView = "new" | "scheduled" | "past" | "studio" | "settings" | "accounts" | "analytics";
 
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -37,14 +37,14 @@ export function Sidebar({ className }: SidebarProps) {
         </div>
 
         <div className="px-2 pb-2">
-          <Button className="w-full justify-start gap-2 text-lg hover:bg-muted/80 transition-colors" size="default">
+          <Button variant="secondary" className="w-full justify-start gap-2 text-lg hover:bg-secondary/40 transition-colors h-12" size="default">
             <PlusCircle className="h-5 w-5" />
             Create Post
           </Button>
         </div>
       </SidebarHeader>
 
-      <SidebarSeparator className="my-2 bg-border/80 h-[2px]" />
+      <SidebarSeparator className="my-3 bg-border/80 h-[1.5px]" />
 
       <SidebarContent>
         <SidebarGroup>
@@ -118,6 +118,48 @@ export function Sidebar({ className }: SidebarProps) {
                 <Link href="/dashboard/content/studio">
                   <Video className="h-4 w-4" />
                   <span>Studio</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-base px-4">Configurations</SidebarGroupLabel>
+          <SidebarMenu className="px-2">  
+
+            <SidebarMenuItem>
+              <SidebarMenuButton
+                asChild
+                isActive={currentView === "accounts"}
+                className={cn(
+                  "text-base transition-colors pl-4",
+                  currentView === "accounts"
+                    ? "text-foreground hover:bg-muted/80"
+                    : "text-muted-foreground hover:bg-muted/80"
+                )}
+              >
+                <Link href="/dashboard/accounts">
+                  <Users className="h-4 w-4" />
+                  <span>Accounts</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+
+            <SidebarMenuItem>
+              <SidebarMenuButton
+                asChild
+                isActive={currentView === "analytics"}
+                className={cn(
+                  "text-base transition-colors pl-4",
+                  currentView === "analytics"
+                    ? "text-foreground hover:bg-muted/80"
+                    : "text-muted-foreground hover:bg-muted/80"
+                )}
+              >
+                <Link href="/dashboard/analytics">  
+                  <BarChart className="h-4 w-4" />
+                  <span>Analytics</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>

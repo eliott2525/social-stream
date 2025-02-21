@@ -10,6 +10,7 @@
 
     /* Customized shadcn/ui colors */
     --background: 0 0% 100%; /* White */
+    --background-secondary: 0 0% 96.1%; /* Light Gray */
     --foreground: 0 0% 0%; /* Black */
     --card: 0 0% 100%;
     --card-foreground: 0 0% 0%;
