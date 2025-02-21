@@ -21,10 +21,42 @@ export default function DashboardPage() {
   }, [router])
 
   return (
-    <div className="container mx-auto p-8">
-      <h1 className="text-2xl font-bold mb-8">Dashboard</h1>
-      <div className="grid gap-6">
-        {/* Dashboard content will go here */}
+    <div className="grid gap-6">
+      {/* Welcome Section */}
+      <div className="rounded-lg border bg-card p-6">
+        <h2 className="text-2xl font-semibold">Welcome back!</h2>
+        <p className="mt-2 text-muted-foreground">
+          Here's what's happening with your social media accounts today.
+        </p>
+      </div>
+
+      {/* Quick Stats */}
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="rounded-lg border bg-card p-6">
+          <div className="text-sm font-medium text-muted-foreground">Posts Today</div>
+          <div className="mt-2 text-3xl font-bold">12</div>
+        </div>
+        <div className="rounded-lg border bg-card p-6">
+          <div className="text-sm font-medium text-muted-foreground">Engagement Rate</div>
+          <div className="mt-2 text-3xl font-bold">4.2%</div>
+        </div>
+        <div className="rounded-lg border bg-card p-6">
+          <div className="text-sm font-medium text-muted-foreground">New Followers</div>
+          <div className="mt-2 text-3xl font-bold">+248</div>
+        </div>
+        <div className="rounded-lg border bg-card p-6">
+          <div className="text-sm font-medium text-muted-foreground">Total Reach</div>
+          <div className="mt-2 text-3xl font-bold">15.7K</div>
+        </div>
+      </div>
+
+      {/* Recent Activity */}
+      <div className="rounded-lg border bg-card p-6">
+        <h3 className="text-lg font-semibold">Recent Activity</h3>
+        <div className="mt-4 space-y-4">
+          {/* Activity items would go here */}
+          <p className="text-muted-foreground">No recent activity to show.</p>
+        </div>
       </div>
     </div>
   )
