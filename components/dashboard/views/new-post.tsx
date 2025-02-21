@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
-import { Image, Link, Video } from "lucide-react";
+import { ArrowUp, Image, Link, Video } from "lucide-react";
 
 export function NewPost() {
   return (
@@ -19,16 +19,16 @@ export function NewPost() {
         <Tabs defaultValue="text" className="centered  w-full">
           <TabsList className="w-full justify-start border-b gap-8 h-12 p-0 bg-transparent">
             <TabsTrigger 
-              value="text"
-              className="relative h-12 rounded-none border-none bg-transparent px-4 font-medium data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:after:absolute data-[state=active]:after:bottom-0 data-[state=active]:after:left-0 data-[state=active]:after:h-0.5 data-[state=active]:after:w-full data-[state=active]:after:bg-primary"
-            >
-              Text Post
-            </TabsTrigger>
-            <TabsTrigger 
               value="media" 
               className="relative h-12 rounded-none border-none bg-transparent px-4 font-medium data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:after:absolute data-[state=active]:after:bottom-0 data-[state=active]:after:left-0 data-[state=active]:after:h-0.5 data-[state=active]:after:w-full data-[state=active]:after:bg-primary"
             >
               Media Post
+            </TabsTrigger>
+            <TabsTrigger 
+              value="text"
+              className="relative h-12 rounded-none border-none bg-transparent px-4 font-medium data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:after:absolute data-[state=active]:after:bottom-0 data-[state=active]:after:left-0 data-[state=active]:after:h-0.5 data-[state=active]:after:w-full data-[state=active]:after:bg-primary"
+            >
+              Text Post
             </TabsTrigger>
           </TabsList>
 
@@ -48,7 +48,7 @@ export function NewPost() {
             <div className="space-y-4">
               <div className="border-2 border-dashed border-brand/20 rounded-lg p-24 text-center hover:bg-muted/30 transition-colors cursor-pointer">
                 <div className="flex flex-col items-center gap-2">
-                  <Image className="h-8 w-8 text-muted-foreground" />
+                  <ArrowUp className="h-8 w-8 text-muted-foreground" />
                   <p className="text-muted-foreground font-medium">
                     Drag and drop your media here
                   </p>

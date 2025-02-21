@@ -139,7 +139,7 @@ export function Sidebar({ className }: SidebarProps) {
                     : "text-muted-foreground hover:bg-muted/80"
                 )}
               >
-                <Link href="/dashboard/accounts">
+                <Link href="/dashboard/content/accounts">
                   <Users className="h-4 w-4" />
                   <span>Accounts</span>
                 </Link>
@@ -157,7 +157,7 @@ export function Sidebar({ className }: SidebarProps) {
                     : "text-muted-foreground hover:bg-muted/80"
                 )}
               >
-                <Link href="/dashboard/analytics">  
+                <Link href="/dashboard/content/analytics">  
                   <BarChart className="h-4 w-4" />
                   <span>Analytics</span>
                 </Link>
