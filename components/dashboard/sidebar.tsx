@@ -26,7 +26,6 @@ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export function Sidebar({ className }: SidebarProps) {
-  const [searchQuery, setSearchQuery] = useState("");
   const pathname = usePathname();
 
   return (
@@ -44,19 +43,6 @@ export function Sidebar({ className }: SidebarProps) {
             <PlusCircle className="h-4 w-4" />
             Create Post
           </Button>
-        </div>
-
-        {/* Search Input */}
-        <div className="px-2 pb-2">
-          <div className="relative">
-            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input
-              placeholder="Search posts..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="h-9 pl-8 text-base"
-            />
-          </div>
         </div>
       </SidebarHeader>
 
