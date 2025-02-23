@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
-import { ArrowUp, Image, Link, Video } from "lucide-react";
+import { ArrowRight, ArrowUp, Image, Link, Video } from "lucide-react";
 
 export function NewPost() {
   return (
@@ -58,8 +58,7 @@ export function NewPost() {
                 </div>
               </div>
               <div className="flex justify-end gap-6 pt-2">
-                <Button variant="outline">Save Draft</Button>
-                <Button>Schedule Post</Button>
+                <Button>Select accounts <ArrowRight className="h-4 w-4 ml-2" /></Button>
               </div>
             </div>
           </TabsContent>
